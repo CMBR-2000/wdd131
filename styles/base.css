@@ -102,6 +102,12 @@ h1 {
     margin: 1rem;
 }
 
+.card:last-of-type ul {
+    width: fit-content;
+    margin: 1rem auto 0;
+    padding-left: 1.5rem;
+}
+
 .card li {
     margin-bottom: 0.5rem;
 }
