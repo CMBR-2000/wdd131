@@ -4,11 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wdd131</title>
+
+    <title>WDD 131 - Dynamic Web Fundamentals - Moroni Balarezo</title>
+
+    <meta
+        name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Moroni Balarezo. Personal home page about Ecuador, web development, and useful web development resources.">
+
+    <meta name="author" content="Moroni Balarezo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>Welcome to WDD 131</h1>
+
+    <header>
+
+        <span id="course-title">
+            WDD 131 - Dynamic Web Fundamentals
+        </span>
+
+        <nav>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+
+            <a href="https://byupw.instructure.com/">Canvas</a>
+
+            <a href="https://www.churchofjesuschrist.org/study/scriptures">
+                Scripture
+            </a>
+
+            <a href="#">Final Project</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Moroni Balarezo</h1>
+
+        <section class="card">
+
+            <h2>About Me</h2>
+
+            <div class="about-me">
+
+                <p>
+                    My name is Moroni Balarezo, and I am from Ecuador. I am currently studying web development because I am very interested in technology and programming. I enjoy learning how websites are created and how HTML, CSS, and JavaScript work together to build something useful and attractive. One of my goals is to continue improving my programming skills so I can become a better developer in the future. I also enjoy solving problems and learning new things, even when they are challenging at first. For me, studying web development is a great opportunity to grow personally and professionally, and I am excited to continue learning and creating new projects.
+                </p>
+
+                <img src="images/profile.jpg" alt="Moroni Balarezo">
+
+            </div>
+
+            <h3>Quito, Ecuador</h3>
+
+            <div class="country">
+
+                <img src="images/ecuadorflag.jpg" alt="Flag of Ecuador">
+
+                <p>
+                    Ecuador is a beautiful and diverse country located in South America. Even though it is relatively small, it has an incredible variety of landscapes, climates, and cultures. The country is divided into four main regions: the Andes Mountains, the Amazon rainforest, the Pacific Coast, and the Galápagos Islands. Each region has its own traditions, food, wildlife, and natural attractions. Quito, the capital city, is located high in the Andes and is known for its historic center, colonial architecture, and beautiful mountain views. Ecuador is also famous for its biodiversity and unique species, especially in the Galápagos Islands. I am proud to be from Ecuador because it is a country full of natural beauty, cultural traditions, friendly people, and many amazing places to explore.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Web Dev Resources</h2>
+
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/">MDN Web Docs</a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com/">W3Schools</a>
+                </li>
+
+                <li>
+                    <a href="https://css-tricks.com/">CSS-Tricks</a>
+                </li>
+
+                <li>
+                    <a href="https://codepen.io/">CodePen</a>
+                </li>
+
+                <li>
+                    <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © <span id="currentyear"></span>
+            | Moroni Balarezo | Ecuador
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
 </body>
 
 </html>
