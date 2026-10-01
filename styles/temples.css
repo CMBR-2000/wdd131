@@ -39,10 +39,10 @@ header h1 {
     content: "❌";
 }
 
-.navigation {
-    display: none;
-    flex-direction: column;
-    margin-top: 1rem;
+nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
 }
 
 .navigation.open {
