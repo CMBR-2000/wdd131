@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 - Temple Album - Moroni Balarezo</title>
+
+    <meta
+        name="description"
+        content="WDD 131 Temple Album - Moroni Balarezo - Responsive temple picture album."
+    >
+    <meta name="author" content="Moroni Balarezo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Album</h1>
+
+        <button id="menu" aria-label="Open navigation menu"></button>
+
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+
+        <div class="temple-grid">
+
+            <figure>
+                <img src="images/temple1-brazil-belem.jpg"
+                    alt="Belém Brazil Temple"
+                    loading="lazy">
+                <figcaption>Belém Brazil Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple2-costarica-sanjose.jpg"
+                    alt="San José Costa Rica Temple"
+                    loading="lazy">
+                <figcaption>San José Costa Rica Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple3-china-hongkong.jpg"
+                    alt="Hong Kong China Temple"
+                    loading="lazy">
+                <figcaption>Hong Kong China Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple4-japan-okinawa.jpg"
+                    alt="Okinawa Japan Temple"
+                    loading="lazy">
+                <figcaption>Okinawa Japan Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple5-colombia-cali.jpg"
+                    alt="Cali Colombia Temple"
+                    loading="lazy">
+                <figcaption>Cali Colombia Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple6-bolivia-lapaz.jpg"
+                    alt="La Paz Bolivia Temple"
+                    loading="lazy">
+                <figcaption>La Paz Bolivia Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple7-ecuador-guayaquil.jpg"
+                    alt="Guayaquil Ecuador Temple"
+                    loading="lazy">
+                <figcaption>Guayaquil Ecuador Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple8-ecuador-quito.jpg"
+                    alt="Quito Ecuador Temple"
+                    loading="lazy">
+                <figcaption>Quito Ecuador Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple9-colombia-barranquilla.jpg"
+                    alt="Barranquilla Colombia Temple"
+                    loading="lazy">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Moroni Balarezo | Ecuador
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
