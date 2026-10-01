@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #94d2bd;
+    --accent-color: #ee9b00;
+    --text-color: #222;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: block;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.weather-icon {
+    display: block;
+    width: 80px;
+    margin: 0 auto 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media screen and (min-width: 800px) {
+
+    main {
+        position: relative;
+    }
+
+    .hero img {
+        min-height: 500px;
+        object-fit: cover;
+    }
+
+    .data {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        width: 280px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .data h2,
+    .weather h2 {
+        background-color: var(--secondary-color);
+        color: #003845;
+        padding: 0.75rem;
+        margin: -1rem -1rem 1rem;
+        text-align: left;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+}
