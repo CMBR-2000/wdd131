@@ -63,6 +63,26 @@ const temples = [
         dedicated: "1983, December, 2",
         area: 116642,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-mexico-temple/mexico-city-mexico-temple-4060-main.jpg"
+    },
+    {
+        templeName: "Ecuador Quito", 
+        location: "Ecuador, Quito", 
+        dedicated: "2022, November, 20",
+        area: 36780,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/quito-ecuador-temple/quito-ecuador-temple-31202-main.jpg"
+    },
+    {
+        templeName: "Ecuador Guayaquil", 
+        location: "Ecuador, Guayaquil", 
+        dedicated: "1999, August, 1-2",
+        area: 45000,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/058-Guayaquil-Ecuador-Temple.jpg"
+    },
+    {    templeName: "Colombia Barranquilla", 
+        location: "Colombia, Barranquilla", 
+        dedicated: "2018, December, 9",
+        area: 25349,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/barranquilla-colombia-temple/barranquilla-colombia-temple-1846-main.jpg"
     }
 ];
 
