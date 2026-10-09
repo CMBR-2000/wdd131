@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form for WDD 131.">
+    <meta name="author" content="Moroni Balarezo">
+    <title>Product Review Form | WDD 131</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <label for="product">Product Name *</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>
+                    Select a Product ...
+                </option>
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating *</legend>
+                <div class="rating">
+                    <div>
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                        <label for="star1">☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star2" name="rating" value="2" required>
+                        <label for="star2">☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star3" name="rating" value="3" required>
+                        <label for="star3">☆☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star4" name="rating" value="4" required>
+                        <label for="star4">☆☆☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">☆☆☆☆☆</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <label for="installation">Date of Installation *</label>
+            <input type="date" id="installation" name="installation" required>
+
+            <fieldset>
+                <legend>Which features did you find useful?</legend>
+                <p class="hint">(Check all that apply)</p>
+
+                <label class="check">
+                    <input type="checkbox" id="durability" name="features" value="durability">
+                    Durability
+                </label>
+
+                <label class="check">
+                    <input type="checkbox" id="ease" name="features" value="ease">
+                    Ease of Use
+                </label>
+
+                <label class="check">
+                    <input type="checkbox" id="performance" name="features" value="performance">
+                    Performance
+                </label>
+
+                <label class="check">
+                    <input type="checkbox" id="design" name="features" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <label for="review">Written Review <span>(Optional)</span></label>
+            <textarea id="review" name="review" rows="5"></textarea>
+
+            <label for="username">Your Name <span>(Optional)</span></label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Moroni Balarezo | Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
