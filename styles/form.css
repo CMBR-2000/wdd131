@@ -217,7 +217,6 @@ footer p {
     margin: 0.3rem 0;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 400px) {
 
     header h1 {
