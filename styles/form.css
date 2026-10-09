@@ -1,9 +1,10 @@
-
 :root {
     --primary: #123b2a;
+    --primary-hover: #245e43;
     --secondary: #dceee2;
     --background: #f5f5f5;
-    --text: #222;
+    --text: #222222;
+    --border: #666666;
 }
 
 * {
@@ -17,6 +18,7 @@ body {
     background-color: var(--background);
     color: var(--text);
     line-height: 1.5;
+    min-height: 100vh;
 }
 
 header {
@@ -24,6 +26,10 @@ header {
     color: white;
     text-align: center;
     padding: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
 }
 
 main {
@@ -52,6 +58,7 @@ form > label:first-child {
 label span {
     font-weight: normal;
     font-style: italic;
+    font-size: 0.9rem;
 }
 
 select,
@@ -61,10 +68,16 @@ textarea {
     display: block;
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #666;
+    border: 1px solid var(--border);
     border-radius: 5px;
     background-color: white;
+    color: var(--text);
     font: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 fieldset {
@@ -80,6 +93,7 @@ legend {
 .rating {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 0.25rem;
 }
 
@@ -87,17 +101,20 @@ legend {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.3rem;
 }
 
 .rating label {
     font-size: 1.1rem;
     cursor: pointer;
+    white-space: nowrap;
 }
 
-.rating input {
+.rating input[type="radio"] {
     width: 18px;
     height: 18px;
     accent-color: var(--primary);
+    cursor: pointer;
 }
 
 .hint {
@@ -106,18 +123,25 @@ legend {
     margin-bottom: 0.5rem;
 }
 
+
 .check {
     display: flex;
     align-items: center;
     gap: 0.7rem;
     margin: 0.8rem 0;
+}
+
+.check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: var(--primary);
     cursor: pointer;
 }
 
-.check input {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--primary);
+.check label {
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 input[type="submit"] {
@@ -135,38 +159,16 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #245e43;
+    background-color: var(--primary-hover);
 }
 
 input:focus-visible,
 select:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+.confirmation a:focus-visible {
     outline: 3px solid #a36a00;
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
-
-footer {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-@media screen and (max-width: 400px) {
-    main {
-        padding: 0.5rem;
-    }
-
-    form {
-        padding: 1rem;
-    }
-
-    .rating label {
-        font-size: 0.9rem;
-    }
-}
-
 
 .confirmation {
     background-color: var(--secondary);
@@ -184,6 +186,12 @@ footer {
     margin: 1rem 0;
 }
 
+#reviewCount {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
 .confirmation a {
     display: inline-block;
     background-color: var(--primary);
@@ -194,5 +202,51 @@ footer {
 }
 
 .confirmation a:hover {
-    background-color: #245e43;
+    background-color: var(--primary-hover);
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .rating {
+        gap: 0.15rem;
+    }
+
+    .rating label {
+        font-size: 0.9rem;
+    }
+
+    .confirmation {
+        padding: 1.5rem 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
 }
