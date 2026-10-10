@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover recommended restaurants from the four regions of Ecuador.">
+
+    <meta name="author" content="Moroni Balarezo">
+
+    <title>Restaurant Recommendations | Traditional Ecuadorian Food</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/project.css">
+
+    <script src="../scripts/recommendations.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <h1>Traditional Ecuadorian Food</h1>
+
+        <button id="menu" type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gastronomy.html">Gastronomy</a></li>
+                <li><a href="recommendations.html" aria-current="page">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-intro">
+            <h2>Restaurant Recommendations</h2>
+
+            <p>
+                Discover some of the best places to experience
+                traditional Ecuadorian food. Explore restaurants
+                from the Sierra, Coast, Amazon, and Galápagos Islands.
+            </p>
+        </section>
+
+        <section class="restaurant-section">
+
+            <h2>Explore Restaurants by Region</h2>
+
+            <div class="filter-buttons" role="group"
+                aria-label="Filter restaurants by region">
+
+                <button type="button" data-region="all"
+                    aria-pressed="true">All Restaurants</button>
+
+                <button type="button" data-region="sierra"
+                    aria-pressed="false">Sierra</button>
+
+                <button type="button" data-region="coast"
+                    aria-pressed="false">Coast</button>
+
+                <button type="button" data-region="amazon"
+                    aria-pressed="false">Amazon</button>
+
+                <button type="button" data-region="galapagos"
+                    aria-pressed="false">Galápagos</button>
+
+            </div>
+
+            <p id="restaurant-count" aria-live="polite"></p>
+
+            <!-- JavaScript creates the cards here -->
+            <div id="restaurant-container" class="restaurant-grid">
+            </div>
+
+        </section>
+
+        <section class="recommendation-form-section">
+
+            <h2>Recommend a Restaurant</h2>
+
+            <p>
+                Do you know a great place to enjoy traditional
+                Ecuadorian food? Share your recommendation with us!
+            </p>
+
+            <form id="recommendation-form">
+
+                <div class="form-field">
+                    <label for="full-name">Full Name</label>
+                    <input type="text"
+                        id="full-name"
+                        name="fullName"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="restaurant-name">Restaurant Name</label>
+                    <input type="text"
+                        id="restaurant-name"
+                        name="restaurantName"
+                        required>
+                </div>
+
+                <fieldset class="form-field">
+                    <legend>Restaurant Region</legend>
+
+                    <div class="region-options">
+                        <label>
+                            <input type="radio"
+                                name="region"
+                                value="sierra"
+                                required>
+                            Sierra
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="region"
+                                value="coast">
+                            Coast
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="region"
+                                value="amazon">
+                            Amazon
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="region"
+                                value="galapagos">
+                            Galápagos
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="comments">
+                        Your Recommendation
+                    </label>
+
+                    <textarea id="comments"
+                            name="comments"
+                            rows="5"
+                            placeholder="What makes this restaurant special?"
+                            required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Submit Recommendation
+                </button>
+
+                <p id="form-message" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            | Moroni Balarezo | Ecuador
+        </p>
+
+        <p>
+            <a href="references.html">References</a>
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
